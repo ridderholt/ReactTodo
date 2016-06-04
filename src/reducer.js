@@ -6,6 +6,14 @@ const todo = (state, action) => {
 				name: action.name,
 				id: action.id
 			};
+		case 'TOGGLE_TODO':
+			if(state.id !== action.id){
+				return state;
+			}
+
+			return Object.assign({}, state, {
+				complete: !state.complete
+			});
 		default:
 			return state;
 	}
@@ -18,6 +26,8 @@ const todos = (state = [], action) => {
 				...state,
 				todo(undefined, action)
 			];
+		case 'TOGGLE_TODO':
+			return state.map(t => todo(t, action))
 		default:
 			return state;
 	}
