@@ -1,6 +1,7 @@
 import React from 'react';
 import { reduxForm } from 'redux-form';
 import { connect } from 'react-redux';
+import { addTodo } from './actions.js';
 
 const todoAddTrigger = (onTodoAdd, name) =>
 	() => onTodoAdd(name);
@@ -20,5 +21,5 @@ const ReduxAddTodoForm = reduxForm({
 
 export default connect(
 	(state) => ({}),
-	(dispatch) => ({onTodoAdd: (name) => dispatch({ type: 'ADD_TODO', name }) })
+	(dispatch) => ({onTodoAdd: (name) => dispatch(addTodo(name)) })
 )(ReduxAddTodoForm);

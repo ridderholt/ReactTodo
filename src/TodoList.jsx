@@ -4,7 +4,7 @@ import Todo from './Todo.jsx';
 
 const TodoList = ({ todos }) => (
 	<ul>
-		{ todos.map((t, i) => <Todo key={i} todo={t} />) }
+		{ todos.map((t, i) => <Todo key={t.id} todo={t} />) }
 	</ul>
 );
 

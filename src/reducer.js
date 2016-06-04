@@ -2,9 +2,9 @@
 const todo = (state, action) => {
 	switch(action.type){
 		case 'ADD_TODO':
-			console.log(action.name);
 			return {
-				name: action.name
+				name: action.name,
+				id: action.id
 			};
 		default:
 			return state;
