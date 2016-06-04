@@ -4,10 +4,10 @@ import Todo from './Todo.jsx';
 
 const TodoList = ({ todos }) => (
 	<ul>
-		{ todos.map((t, i) => <Todo todo={t} />) }
+		{ todos.map((t, i) => <Todo key={i} todo={t} />) }
 	</ul>
 );
 
 export default connect(
-	(state) => ({todos: state.todos})
+	(state) => ({todos: state.todoApp})
 )(TodoList);
