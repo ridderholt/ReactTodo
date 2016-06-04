@@ -1,0 +1,31 @@
+{
+  "name": "reacttodo",
+  "version": "1.0.0",
+  "description": "A simple Todo app build using React and Redux to show how FP principles can be used when developing JS apps",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robinridderholt/ReactTodo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robinridderholt/ReactTodo/issues"
+  },
+  "homepage": "https://github.com/robinridderholt/ReactTodo#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.5.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.0.1"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "express-history-api-fallback": "^2.0.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0"
+  }
+}
