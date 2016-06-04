@@ -1,15 +1,11 @@
 import React from 'react';
+import TodoAdder from './TodoAdder.jsx';
 
-// const App = () => {
-// 	return (
-// 		<div>Hello World!</div>
-// 	);
-// };
-
-class App extends React.Component {
-	render(){
-		return <div>Hello world!</div>
-	}
-}
+const App = () => (
+		<div>
+			<h1>Remember</h1>
+			<TodoAdder />
+		</div>
+	);
 
 export default App;
