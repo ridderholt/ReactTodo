@@ -1,6 +1,6 @@
 import fetch from 'isomorphic-fetch';
 
-let todoIdCounter = 0;
+let todoIdCounter = 3;
 
 export const addTodo = (name) => {
 	return {
