@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import store from './store.js';
 import { Provider } from 'react-redux';
 import App from './App.jsx';
+import { fetchTodos } from './actions.js';
 
 const render = () => {
 	ReactDOM.render(
@@ -14,3 +15,4 @@ const render = () => {
 };
 
 render();
+store.dispatch(fetchTodos());

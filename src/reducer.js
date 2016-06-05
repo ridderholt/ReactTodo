@@ -28,6 +28,11 @@ const todos = (state = [], action) => {
 			];
 		case 'TOGGLE_TODO':
 			return state.map(t => todo(t, action))
+		case 'TODOS_FETCHED':
+			return [
+				...state,
+				...action.todos
+			]
 		default:
 			return state;
 	}

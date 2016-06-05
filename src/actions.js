@@ -1,3 +1,5 @@
+import fetch from 'isomorphic-fetch';
+
 let todoIdCounter = 0;
 
 export const addTodo = (name) => {
@@ -14,4 +16,19 @@ export const completeTodo = (id) => {
 		id,
 		type: 'TOGGLE_TODO'
 	}
+};
+
+const todosFetched = (todos) => {
+	return {
+		todos,
+		type: 'TODOS_FETCHED'
+	};
+};
+
+export const fetchTodos = () => {
+	return (dispatch) => {
+		return fetch('/api/todos')
+				.then(response => response.json())
+				.then(json => dispatch(todosFetched(json)))
+	};
 };
